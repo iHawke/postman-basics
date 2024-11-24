@@ -33,7 +33,7 @@
 
 #### 📚 - Resources
 
-* [Simple Books API documentation](./simple-books-api.md)
+* [Simple Books API documentation](./api.md)
 
 
 ### Lesson 4 - HTTP
