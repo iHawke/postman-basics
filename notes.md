@@ -2,8 +2,6 @@
 
 ## Unit 1 - Postman Basics
 
-#### 📚 - Resources
-
 ### Lesson 1 - What is Postman?
 
 #### 💡 - Main ideas
