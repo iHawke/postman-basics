@@ -6,6 +6,30 @@ The API is available at `https://simple-books-api.glitch.me`
 
 ## Endpoints ##
 
+## API Authentication aka login ##
+
+To submit or view an order, you need to register your API client.  In other words you need to login:
+
+POST `/api-clients/`
+
+The request body needs to be in JSON format and include the following properties:
+
+ - `clientName` - String
+ - `clientEmail` - String
+
+ Example
+
+ ```
+ {
+    "clientName": "Postman",
+    "clientEmail": "valentin@example.com"
+}
+ ```
+
+The response body will contain the access token. The access token is valid for 7 days.  Usually in corporate
+environment, all request needs to be authenticated.  So, your other request should carry the `access-token` in
+their Header.
+
 ### Status ###
 
 GET `/status`
@@ -16,9 +40,7 @@ Returns the status of the API.
 
 GET `/books`
 
-Returns a list of books.
-
-Optional query parameters:
+Returns a list of books. Optional "query parameters":
 
 - type: fiction or non-fiction
 - limit: a number between 1 and 20.
@@ -28,7 +50,8 @@ Optional query parameters:
 
 GET `/books/:bookId`
 
-Retrieve detailed information about a book.
+Retrieve detailed information about a book. Please note that now we're passing the book-id as a "path parameter"
+and not a "query parameter."
 
 
 ### Submit an order ###
@@ -100,28 +123,6 @@ The request body needs to be empty.
 DELETE /orders/PF6MflPDcuhWobZcgmJy5
 Authorization: Bearer <YOUR TOKEN>
 ```
-
-## API Authentication ##
-
-To submit or view an order, you need to register your API client.
-
-POST `/api-clients/`
-
-The request body needs to be in JSON format and include the following properties:
-
- - `clientName` - String
- - `clientEmail` - String
-
- Example
-
- ```
- {
-    "clientName": "Postman",
-    "clientEmail": "valentin@example.com"
-}
- ```
-
-The response body will contain the access token. The access token is valid for 7 days.
 
 **Possible errors**
 
