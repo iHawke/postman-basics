@@ -5,6 +5,7 @@
 ### Lesson 1 - What is Postman?
 
 #### 💡 - Summary
+- API stands for "Application Programming Interfaces."
 - Postman is a tool that mimics a web-browser and allows us to easily work with APIs.
 - Postman is used to build HTTP requests that we send to the web-server running the APIs.
 
@@ -29,8 +30,8 @@
 #### 💡 - Summary
 
 - To use an API you need to read the API documentation first: [Simple Books API documentation](./api.md)
-- Work in Postman is organized in Workspaces & Collections.
-- Server responses always contains a status code:
+- Work in Postman is organized in Workspaces & Collections.  A collection is like a "folder" where you keep all your API calls.
+- Server responses always contains a status code. Some commonly used ones are:
 
 | Code | Desc                  |
 |------|-----------------------| 
@@ -56,8 +57,7 @@
    GET / HTTP/1.1
 ```  
 - The API we are using the HTTPS protocol.
-- HTTPS stands for Secure Hypertext Transfer Protocol.
-- HTTPS ensures that the connection is encrypted.
+- HTTPS stands for Secured HTTP where connection is encrypted.
 - All APIs should use HTTPS.
 - From our point of view HTTP and HTTPS are the same.
 - The HTTP request message will contain: 
@@ -70,7 +70,7 @@
    * Headers
    * Body
 
-### Lesson 5 - Postman collections and variables
+### Lesson 5 - Postman: First API call, collections & variables
 
 #### 💡 - Summary
 - Save requests to re-use them later.
@@ -79,7 +79,7 @@
 - Our saved baseUrl will be displayed as `{{baseUrl}}` in the address bar.
 - Variables allow us to avoid repeating the same information.
 - Variables allow us to easily make changes.
-- A Postman variable has two states
+- A Postman variable has two states:
    * INITIAL VALUE - This will be available to others if you share the collection.
    * CURRENT VALUE - This is private to you and not shared.
 
@@ -106,7 +106,7 @@
 
 ### Homework
 - Study the API documentation and use the `limit` query parameter in the `/books` endpoint.
-- Try out different values.
+- Try out different values for `limit`.
 - Can you make the API return a status code 400?
 
 
@@ -128,7 +128,7 @@
 - Postman will indicate when your JSON is invalid.
 
 
-### Problem:
+### Homework:
 - Create the POST request to order a book.
 - Try ordering a book that is not in stock.
 
@@ -147,11 +147,11 @@
 
 #### 💡 - Summary
 - Postman is a tool for dealing with APIs.
-- Postman cannot work with User Interfaces, click buttons and fill out forms.
+- Postman cannot work with User Interactions, such as: click buttons & fill out forms etc.
 - Postman is not a performance testing tool.
 - Postman can be used for security testing but has not been designed for this purpose.
 
-### Lesson 12 - Viewing existing orders
+### Lesson 12 - Viewing existing orders & REST behavior
 
 #### 💡 - Summary
 - Using the GET request method on the `orders` endpoint will give us a list of orders.
@@ -179,18 +179,18 @@
 
 #### 💡 - Summary
 
-- In this second part of the course, our goal is to automate testing of the API.
-- So far, we have done manual testing but we want to write API tests to avoid having to manually re-test the API
+- How to add `test scripts` after an API call?
+- Tests in Postman are written in JavaScript.
+- Tests are executed ONLY after the response has arrived from the API.
+- Testing the response status code is one of the easiest tests you can write.
+- Can a script checks for us the things we would check manually as a tester?
 
 ### Lesson 16 - Your first API tests
 
 #### 💡 - Summary
 - We are looking at the response to understand if the API is working properly.
 - With API tests we want to avoid manually re-testing the API.
-- Tests in Postman are written in JavaScript.
-- Tests are executed ONLY after the response has arrived from the API.
 - Postman uses an assertion library called Chai.js
-- Testing the response status code is one of the easiest tests you can write.
 - When writing tests, we want to make sure the tests fail.
 - To make the assertions on a JSON response, you first need to parse it.
 - To see the contents of a JavaScript variable you can use `console.log()`
@@ -208,7 +208,7 @@
 
 #### 💡 - Summary 
 - Postman variables are fundamental to automating testing of the API.
-- Postman environments (environment variables) are good if you have multiple testing environments (localhost, testing, production)
+- Postman environments (environment variables) are good if you have multiple testing environments (Local, QA, PROD)
 - Postman collection variables are saved in the collection.
 - Postman global variables are available to all collection in a workspace.
 - We use Postman global variables as the data we save is not that important after the execution has stopped.
@@ -239,15 +239,9 @@
 - The Collection runner is a built-in functionality of Postman.
 - The Collection runner allows you to execute the entire collection with just one click.
 - Make sure to check (:white_check_mark:) the "Save response" box as this will allow you to inspect the response body.
+- You can re-order the APIs simply by dragging them around.
 
-### Lesson 20 - Request execution order
-
-#### 💡 - Summary
-- If you run a Postman collection, the default order is as you have it in the collection.
-- You can change that order if you use `postman.setNextRequest` and specify the name of the next request
-- If you wish to stop the execution prematurely, you can do so by running `postman.setNextRequest(null)`
-
-### Lesson 21 - Postman monitors
+### Lesson 20 - Postman monitors
 
 #### 💡 - Summary
 - Creating a Postman monitor ensures that you can run a Postman collection according to a pre-defined schedule.
@@ -255,7 +249,7 @@
 - If you are not familiar with continuous integration servers like Jenkins, GitLab CI or TeamCity, this is a quick and easy way to access a Postman collection.
 - The API needs to be accessible from any network.
 
-### Lesson 22 - Newman
+### Lesson 21 - Newman
 
 #### 💡 - Summary
 - Newman is a CLI tool that can take a Postman collection, run all the tests and generate a report at the end.
@@ -276,14 +270,14 @@
 * [Postman API](https://documenter.getpostman.com/view/631643/JsLs/?version=latest)
 * [Newman Support](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/)
 
-### Lesson 23 - HTML reports with Newman
+### Lesson 22 - HTML reports with Newman
 
 #### 💡 - Summary
 - html-extra is the most popular reporter in the Postman community.  It can be found here:
 [htmlextra reporter](https://www.npmjs.com/package/newman-reporter-htmlextra)
 
 
-### Lesson 24 - CI/CD overview
+### Lesson 23 - CI/CD overview
 
 #### 💡 - Summary
 - CI/CD is becoming an industry standard now.
