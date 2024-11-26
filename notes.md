@@ -1,16 +1,16 @@
 # Introduction to Postman course notes
 
-## Unit 1 - Postman Basics
+## Session 1 - Postman Basics
 
 ### Lesson 1 - What is Postman?
 
-#### 💡 - Main ideas
-- Postman is a tool that allows us to easily work with APIs.
-- Postman is used to build HTTP requests that we send to the server running the API.
+#### 💡 - Summary
+- Postman is a tool that mimics a web-browser and allows us to easily work with APIs.
+- Postman is used to build HTTP requests that we send to the web-server running the APIs.
 
 ### Lesson 2 - How to install Postman
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - There are two ways to run Postman: 
    * As a standalone app or 
    * Directly in the browser
@@ -25,20 +25,15 @@
 
 ### Lesson 3 - Your first request with Postman
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 
-- To use an API you need to read the API documentation. We're using Simple Books API whose documentation can be found in the resources section of this lesson below.
+- To use an API you need to read the API documentation. Please read [Simple Books API documentation](./api.md) first.
 - Work in Postman is organized in Workspaces.
 - A status code 200 (or any status like 2XX) indicates that the request was successful.
 
-#### 📚 - Resources
-
-* [Simple Books API documentation](./api.md)
-
-
 ### Lesson 4 - HTTP
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 
 - How HTTP works?
 ```angular2html
@@ -62,7 +57,7 @@
 
 ### Lesson 5 - Postman collections and variables
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - You can save requests so that you can re-use them later on.
 - All requests need to be added to a Postman collection.
 - Usually you will have a Postman collection for each API.
@@ -76,7 +71,7 @@
 
 ### Lesson 6 - POST request / API Authentication
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - A `POST` request allows you to send data in the request body.
 - The endpoint for submitting orders requires authentication.
 - Some APIs/endpoints are public and require no authentication.
@@ -87,7 +82,7 @@
 
 ### Lesson 7 - Query parameters
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - JSON is the most popular format that APIs use to send data.
 - Query parameters start after the `?` in the URL.
    * example : `{{baseUrl}}/books?type=fiction`
@@ -106,7 +101,7 @@
 
 ### Lesson 9 - Path variables
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - `:bookId` is a path variable in the URL.
 - This endpoint allows us to specify a value that changes all the time, depending on the book.
 - `:bookId` is just a placeholder and does not get sent.
@@ -115,7 +110,7 @@
 
 ### Lesson 10 - JSON format
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - You need to specify valid JSON, otherwise the server won't understand your request.
 - Use double-quotes `""` for strings, separate key-value pairs with a comma sign `,`
 - Numbers, booleans don't need to be between quotes.
@@ -128,7 +123,7 @@
 
 ### Lesson 11 - Random test data
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - You can use a special type of Postman variable to generate random data
    * example: `{{$randomFullName}}`
 - To inspect the request body you can use the Postman console.
@@ -139,7 +134,7 @@
 
 ### Lesson 12 - Is Postman the right tool for me?
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - Postman is a tool for dealing with APIs.
 - Postman cannot work with User Interfaces, click buttons and fill out forms.
 - Postman is not a performance testing tool.
@@ -147,7 +142,7 @@
 
 ### Lesson 13 - Viewing existing orders
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - Using the GET request method on the `orders` endpoint will give us a list of orders.
 - Using the POST request method on the same endpoint will let us create a new order.
 
@@ -157,28 +152,28 @@
 
 ### Lesson 15 - PATCH request
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - A `PATCH` request is typically used for updating existing data.
 - A `PATCH` usually does a partial update, by changing only some of the properties.
 
 ### Lesson 16 - DELETE request
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - A `DELETE` request is used for deleting data.
 - If you try to get the same data with a `GET` request, you will get a `404 Not Found` status code.
 
-## Unit 2 - Test automation with Postman
+## Session 2 - Test automation with Postman
 
 ### Lesson 17 - Introduction to test automation
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 
 - In this second part of the course, our goal is to automate testing of the API.
 - So far, we have done manual testing but we want to write API tests to avoid having to manually re-test the API
 
 ### Lesson 18 - Your first API tests
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - We are looking at the response to understand if the API is working properly.
 - With API tests we want to avoid manually re-testing the API.
 - Tests in Postman are written in JavaScript.
@@ -200,7 +195,7 @@
 
 ### Lesson 20 - Postman variables
 
-#### 💡 - Main ideas 
+#### 💡 - Summary 
 - Postman variables are fundamental to automating testing of the API.
 - Postman environments (environment variables) are good if you have multiple testing environments (localhost, testing, production)
 - Postman collection variables are saved in the collection.
@@ -209,7 +204,7 @@
 
 ### Lesson 21 - Extracting data from the response
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 
 - Having hardcoded values in requests can make the API tests fail if the data changes.
 - We are using the filter function available on all arrays to remove the books that are not available.
@@ -230,7 +225,7 @@
 
 ### Lesson 24 - Collection runner
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 
 - The Collection runner is a built-in functionality of Postman.
 - The Collection runner allows you to execute the entire collection with just one click.
@@ -238,14 +233,14 @@
 
 ### Lesson 25 - Request execution order
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - If you run a Postman collection, the default order is as you have it in the collection.
 - You can change that order if you use `postman.setNextRequest` and specify the name of the next request
 - If you wish to stop the execution prematurely, you can do so by running `postman.setNextRequest(null)`
 
 ### Lesson 26 - Postman monitors
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - Creating a Postman monitor ensures that you can run a Postman collection according to a pre-defined schedule.
 - Running the collection will be handled by Postman on their infrastructure, you don't need to keep Postman open.
 - If you are not familiar with continuous integration servers like Jenkins, GitLab CI or TeamCity, this is a quick and easy way to access a Postman collection.
@@ -253,7 +248,7 @@
 
 ### Lesson 27 - Newman
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - Newman is a CLI tool that can take a Postman collection, run all the tests and generate a report at the end.
 - Newman does not have an interface, you need to work with it from the terminal.
 - Often Newman is installed on an integration server like Jenkins, GitLab CI or TeamCity.
@@ -274,7 +269,7 @@
 
 ### Lesson 28 - HTML reports with Newman
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - htmlextra is the most popular reporter in the Postman community
 
 #### 📚 - Resources
@@ -284,5 +279,5 @@
 
 ### Lesson 29 - CI/CD overview
 
-#### 💡 - Main ideas
+#### 💡 - Summary
 - Newman is particularly useful when you integrate it with a CI server.
