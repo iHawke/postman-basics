@@ -60,7 +60,7 @@
 #### 💡 - Main ideas
 - You can save requests so that you can re-use them later on.
 - All requests need to be added to a Postman collection.
-- Typically you will have a Postman collection for each API.
+- Usually you will have a Postman collection for each API.
 - We are storing the base address of the API in a collection variable called `baseUrl`. 
 - Our saved baseUrl will be displayed as `{{baseUrl}}` in the address bar.
 - Variables allow us to avoid repeating the same information.
@@ -87,7 +87,7 @@
 - Query parameters start after the `?` in the URL.
    * example : `{{baseUrl}}/books?type=fiction`
 - The format is `key=value`
-- Muliple query parameters are delimited in the URL with an `&`. 
+- Multiple query parameters are delimited in the URL with an `&`. 
    * example: `foo=1&bar=2`
 - Depending on the API, some query parameters can be optional or mandatory.
 - A response status 400 indicates an issue with the request data.
