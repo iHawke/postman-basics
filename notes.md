@@ -40,6 +40,11 @@
 
 #### 💡 - Main ideas
 
+- How HTTP works?
+```angular2html
+   telnet https://simple-books-api.glitch.me 80
+   GET / HTTP/1.1
+```  
 - The API we are using the HTTPS protocol.
 - HTTPS stands for Secure Hypertext Transfer Protocol.
 - HTTPS ensures that the connection is encrypted.
