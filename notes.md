@@ -49,7 +49,7 @@
 ### Lesson 4 - HTTP
 
 #### 🤔- Summary
-- How HTTP works?
+- How does HTTP works?
 ```shell
    telnet https://simple-books-api.glitch.me 80
    GET / HTTP/1.1
@@ -67,6 +67,15 @@
    * Status code (200, 404, 500, ...)
    * Headers
    * Body
+- Relationship: HTTP vs. DML vs. CRUD
+
+| HTTP   | DML    | CRUD   |
+|--------|--------|--------|
+| GET    | SELECT | READ   |
+| POST   | INSERT | CREATE |
+| DELETE | DELETE | DELETE |
+| PATCH  | UPDATE | UPDATE |
+
 
 ### Lesson 5 - Postman: First API call, collections & variables
 
