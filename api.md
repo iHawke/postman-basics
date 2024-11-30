@@ -54,7 +54,7 @@ Retrieve detailed information about a book. Please note that now we're passing t
 and not a "query parameter."
 
 
-### Submit an order ###
+### Create an order ###
 
 POST `/orders`
 
@@ -78,13 +78,13 @@ Authorization: Bearer <YOUR TOKEN>
 
 The response body will contain the order Id.
 
-### Get all orders ###
+### List of orders ###
 
 GET `/orders`
 
 Allows you to view all orders. Requires authentication.
 
-### Get an order ###
+### Get a single order ###
 
 GET `/orders/:orderId`
 
