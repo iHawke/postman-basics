@@ -1,6 +1,6 @@
 # Simple Books API #
 
-This API allows you to reserve a book.
+This API allows you to: view books, order a book, update an order, delete an order etc.
 
 The API is available at `https://simple-books-api.glitch.me`
 
